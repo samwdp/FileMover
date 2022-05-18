@@ -1,8 +1,12 @@
 #+title: File Mover 
 
 * Information
-This is a simple application that monitors a given folder and moves certain files with extensions to different locations 
-Currently this only works watching on a single folder. Will look at nesting and spawning multiple threads that watch folders
+This is a simple application that monitors a given folder and moves certain files with extensions to different locations.
+Currently this only works watching on a single folder. Will look at nesting and spawning multiple threads that watch folders.
+
+For the latest releasese please check the [[https:github.com/samwdp/FileMover/actions][actions]] tab of this repo and download the zip from the latest successful build.
+
+If you want to build from source you will nees the dotnet 6 sdk or higher. You can then do a build or publish command to build the source.
 
 ** Requirments
 Dotnet runtime 6 or higher
