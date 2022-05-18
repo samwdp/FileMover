@@ -4,15 +4,15 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <PublishSingleFile>true</PublishSingleFile>
-    <SelfContained>false</SelfContained>
-    <PublishReadyToRun>true</PublishReadyToRun>
-    <DebugType>none</DebugType>
+    <Nullable>enable</Nullable>    
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <AssemblyName>FileMover</AssemblyName>
+	<PublishSingleFile>true</PublishSingleFile>
+	<SelfContained>false</SelfContained>
+	<PublishReadyToRun>true</PublishReadyToRun>
+	<DebugType>none</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
