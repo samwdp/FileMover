@@ -71,11 +71,10 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        List<Config>? configs = JsonSerializer.Deserialize<List<Config>>(File.ReadAllText(@".\config.json"));
+        List<Config>? configs = JsonSerializer.Deserialize<List<Config>>(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "config.json")));
         foreach (var c in configs!)
         {
             new Thread(() => FileWatcherNode.Run(c)).Start();
         }
     }
-
 }
