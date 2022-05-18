@@ -1,0 +1,36 @@
+#+title: File Mover 
+
+* Information
+This is a simple application that monitors a given folder and moves certain files with extensions to different locatoins 
+** Config file
+Outline of config file. This should be in the same location as the executable file
+#+begin_src json
+  {
+      "DownloadFolder": "",
+      "ImageFile": "",
+      "ApplicationFile": "",
+      "VideoFile": "",
+      "OtherFile": "",
+      "ImageExtensions": [
+          ".jpg",
+          ".png",
+          ".jpeg"
+      ],
+      "ApplicationExtensions": [
+          ".exe",
+          ".msi"
+      ],
+      "VideoExtensions": [
+          ".mov",
+          ".mp4"
+      ],
+      "OtherExtensions": [
+          ".rar",
+          ".zip"
+      ]
+  }
+#+end_src
+
+* TODOS
+** DONE [x] Single Folder
+** TODO [ ] Multi Folder

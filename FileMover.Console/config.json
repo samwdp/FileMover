@@ -1,0 +1,24 @@
+{
+    "DownloadFolder": "",
+    "ImageFile": "",
+    "ApplicationFile": "",
+    "VideoFile": "",
+    "OtherFile": "",
+    "ImageExtensions": [
+        ".jpg",
+        ".png",
+        ".jpeg"
+    ],
+    "ApplicationExtensions": [
+        ".exe",
+        ".msi"
+    ],
+    "VideoExtensions": [
+        ".mov",
+        ".mp4"
+    ],
+    "OtherExtensions": [
+        ".rar",
+        ".zip"
+    ]
+}
