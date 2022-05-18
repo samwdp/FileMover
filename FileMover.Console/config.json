@@ -1,9 +1,9 @@
 {
     "DownloadFolder": "",
-    "ImageFile": "",
-    "ApplicationFile": "",
-    "VideoFile": "",
-    "OtherFile": "",
+    "ImageFolder": "",
+    "ApplicationFolder": "",
+    "VideoFolder": "",
+    "OtherFolder": "",
     "ImageExtensions": [
         ".jpg",
         ".png",

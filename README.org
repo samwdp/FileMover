@@ -1,16 +1,21 @@
 #+title: File Mover 
 
 * Information
-This is a simple application that monitors a given folder and moves certain files with extensions to different locatoins 
+This is a simple application that monitors a given folder and moves certain files with extensions to different locations 
+Currently this only works watching on a single folder. Will look at nesting and spawning multiple threads that watch folders
+
+** Requirments
+Dotnet runtime 6 or higher
+
 ** Config file
-Outline of config file. This should be in the same location as the executable file
+Outline of config file. This should be in the same location as the executable file*
 #+begin_src json
   {
       "DownloadFolder": "",
-      "ImageFile": "",
-      "ApplicationFile": "",
-      "VideoFile": "",
-      "OtherFile": "",
+      "ImageFolder": "",
+      "ApplicationFolder": "",
+      "VideoFolder": "",
+      "OtherFolder": "",
       "ImageExtensions": [
           ".jpg",
           ".png",
@@ -30,7 +35,9 @@ Outline of config file. This should be in the same location as the executable fi
       ]
   }
 #+end_src
-
+#+html: * this will hopefully be movable 
 * TODOS
 ** DONE [x] Single Folder
 ** TODO [ ] Multi Folder
+** TODO [ ] Move config file and add as argument 
+** TODO [ ] Fix problem with browser displaying as "Download Failed" 
