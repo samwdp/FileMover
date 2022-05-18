@@ -25,9 +25,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: FileMover_win-x64
-          path: /home/runner/work/FileMover/FileMover.Console/bin/Release/net6.0/win-x64/publish/
+          path: /home/runner/work/FileMover/FileMover/FileMover.Console/bin/Release/net6.0/win-x64/publish/
       - name: Upload app
         uses: actions/upload-artifact@v3
         with:
           name: FileMover_linux-x64
-          path: /home/runner/work/FileMover/FileMover.Console/bin/Release/net6.0/linux-x64/publish/
+          path: /home/runner/work/FileMover/FileMover/FileMover.Console/bin/Release/net6.0/linux-x64/publish/
