@@ -3,7 +3,7 @@ name: .Net Core Windows
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 jobs:
   build:

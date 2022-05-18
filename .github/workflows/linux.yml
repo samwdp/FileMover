@@ -3,7 +3,7 @@ name: .Net Core Linux
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 jobs:
   build:
