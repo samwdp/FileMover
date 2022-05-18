@@ -41,7 +41,7 @@ Outline of config file. This should be in the same location as the executable fi
 #+end_src
 #+html: * this will hopefully be movable 
 * TODOS
-** DONE [x] Single Folder
-** TODO [ ] Multi Folder
-** TODO [ ] Move config file and add as argument 
-** TODO [ ] Fix problem with browser displaying as "Download Failed" 
+- [X] Single Folder
+- [ ] Multi Folder
+- [ ] Move config file and add as argument 
+- [ ] Fix problem with browser displaying as "Download Failed" 
