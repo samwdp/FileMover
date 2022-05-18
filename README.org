@@ -1,8 +1,7 @@
 #+title: File Mover 
 
 * Information
-This is a simple application that monitors a given folder and moves certain files with extensions to different locations.
-Currently this only works watching on a single folder. Will look at nesting and spawning multiple threads that watch folders.
+This is a simple application that monitors a given folder and moves certain files with extensions to different locations. 
 
 For the latest releasese please check the [[https:github.com/samwdp/FileMover/actions][actions]] tab of this repo and download the zip from the latest successful build.
 
@@ -13,35 +12,38 @@ Dotnet runtime 6 or higher
 
 ** Config file
 Outline of config file. This should be in the same location as the executable file*
+When you add a new item in the overall list of places to watch, when the application starts, a new thread is created to watch that folder. Keep in mind that this may cause your system to slow down but the application is small so I cannot see that being a problem.
 #+begin_src json
-  {
-      "DownloadFolder": "",
-      "ImageFolder": "",
-      "ApplicationFolder": "",
-      "VideoFolder": "",
-      "OtherFolder": "",
-      "ImageExtensions": [
-          ".jpg",
-          ".png",
-          ".jpeg"
-      ],
-      "ApplicationExtensions": [
-          ".exe",
-          ".msi"
-      ],
-      "VideoExtensions": [
-          ".mov",
-          ".mp4"
-      ],
-      "OtherExtensions": [
-          ".rar",
-          ".zip"
-      ]
-  }
+  [
+      {
+          "WatchingFolder": "",
+          "ImageFolder": "",
+          "ApplicationFolder": "",
+          "VideoFolder": "",
+          "OtherFolder": "",
+          "ImageExtensions": [
+              ".jpg",
+              ".png",
+              ".jpeg"
+          ],
+          "ApplicationExtensions": [
+              ".exe",
+              ".msi"
+          ],
+          "VideoExtensions": [
+              ".mov",
+              ".mp4"
+          ],
+          "OtherExtensions": [
+              ".rar",
+              ".zip"
+          ]
+      }
+  ]
 #+end_src
 #+html: * this will hopefully be movable 
 * TODOS
 - [X] Single Folder
-- [ ] Multi Folder
+- [X] Multi Folder
 - [ ] Move config file and add as argument 
 - [ ] Fix problem with browser displaying as "Download Failed" 

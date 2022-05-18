@@ -1,24 +1,26 @@
-{
-    "DownloadFolder": "",
-    "ImageFolder": "",
-    "ApplicationFolder": "",
-    "VideoFolder": "",
-    "OtherFolder": "",
-    "ImageExtensions": [
-        ".jpg",
-        ".png",
-        ".jpeg"
-    ],
-    "ApplicationExtensions": [
-        ".exe",
-        ".msi"
-    ],
-    "VideoExtensions": [
-        ".mov",
-        ".mp4"
-    ],
-    "OtherExtensions": [
-        ".rar",
-        ".zip"
-    ]
-}
+[
+    {
+        "WatchingFolder": "",
+        "ImageFolder": "",
+        "ApplicationFolder": "",
+        "VideoFolder": "",
+        "OtherFolder": "",
+        "ImageExtensions": [
+            ".jpg",
+            ".png",
+            ".jpeg"
+        ],
+        "ApplicationExtensions": [
+            ".exe",
+            ".msi"
+        ],
+        "VideoExtensions": [
+            ".mov",
+            ".mp4"
+        ],
+        "OtherExtensions": [
+            ".rar",
+            ".zip"
+        ]
+    }
+]

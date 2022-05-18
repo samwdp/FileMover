@@ -12,18 +12,19 @@ public class Config
     public string? VideoFolder { get; set; }
     public string? ApplicationFolder { get; set; }
     public string? OtherFolder { get; set; }
-    public string? DownloadFolder { get; set; }
+    public string? WatchingFolder { get; set; }
 }
 
-public class Program
+public class FileWatcherNode
 {
     private static Config? _config;
-    public static void Main(string[] args)
+
+    public static void Run(Config config)
     {
-        _config = JsonSerializer.Deserialize<Config>(File.ReadAllText(@".\config.json"));
         while (true)
         {
-            using var watcher = new FileSystemWatcher(_config!.DownloadFolder!);
+            _config = config;
+            using var watcher = new FileSystemWatcher(_config!.WatchingFolder!);
             watcher.NotifyFilter = NotifyFilters.Attributes
                                       | NotifyFilters.CreationTime
                                       | NotifyFilters.DirectoryName
@@ -63,4 +64,18 @@ public class Program
             return;
         }
     }
+
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        List<Config>? configs = JsonSerializer.Deserialize<List<Config>>(File.ReadAllText(@".\config.json"));
+        foreach (var c in configs!)
+        {
+            new Thread(() => FileWatcherNode.Run(c)).Start();
+        }
+    }
+
 }
