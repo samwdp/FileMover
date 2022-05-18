@@ -1,4 +1,4 @@
-name: .Net Core Windows
+name: Build and Publish
 
 on:
   push:
@@ -17,10 +17,17 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release
-      - name: Publish
+      - name: Publish Windows
         run: dotnet publish --configuration Release -r win-x64 --no-self-contained
-      - name: Upload app
+      - name: Publish Linux
+        run: dotnet publish --configuration Release -r linux-x64 --no-self-contained
+      - name: Upload Windows
         uses: actions/upload-artifact@v3
         with:
           name: FileMover_win-x64
-          path: /home/runner/work/FileMover.Console/bin/Release/net6.0/win-x64/publish/
+          path: /home/runner/work/FileMover/FileMover.Console/bin/Release/net6.0/win-x64/publish/
+      - name: Upload app
+        uses: actions/upload-artifact@v3
+        with:
+          name: FileMover_linux-x64
+          path: /home/runner/work/FileMover/FileMover.Console/bin/Release/net6.0/linux-x64/publish/
